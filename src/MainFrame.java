@@ -7,26 +7,28 @@ public class MainFrame extends JFrame implements ActionListener{
     JButton open;
     JLabel label;
     DisplayMode display;
-    public MainFrame(){
+    public MainFrame() {
         super();
         setVisible(true);
-        setLayout(new GridLayout(2,0));
-        
-        display = new DisplayMode(0,0,8,75);
-        
+        setLayout(new GridLayout(2, 0));
+
+        display = new DisplayMode(0, 0, 8, 75);
+
         open = new JButton("Click To Open");
         open.setActionCommand("AntOpener");
 
         label = new JLabel("Travelling Salesman Problem Solver.");
         label.setHorizontalAlignment(JLabel.CENTER);
-        
+
         open.addActionListener(this);
 
         add(label);
         add(open);
-        
+
         setFocusable(true);
     }
+
+    
     public void actionPerformed(ActionEvent e){
         if(e.getActionCommand().equals("AntOpener")){
             dispose();

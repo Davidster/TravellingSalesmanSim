@@ -46,7 +46,6 @@ public class GraphPanel extends JPanel implements MouseListener,MouseMotionListe
     private GraphFrame gFrame;
     public Timer antAnimation;
 
-
     public GraphPanel(GraphFrame frame){
         gFrame = frame;
         totalAngle = 0;
@@ -66,20 +65,20 @@ public class GraphPanel extends JPanel implements MouseListener,MouseMotionListe
         }
 
         antAnimation = new Timer(ANT_SPEED,
-                new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        boolean timeToStop = false;
-                        currentAntPathIndex++;
-                        if(currentAntPathIndex == currentAntPath.size()){
-                            timeToStop = true;
-                            currentAntPathIndex = 0;
-                        }
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    boolean timeToStop = false;
+                    currentAntPathIndex++;
+                    if(currentAntPathIndex == currentAntPath.size()){
+                        timeToStop = true;
+                        currentAntPathIndex = 0;
+                    }
+                    repaint();
+                    if(timeToStop) {
+                        refresh();
                         repaint();
-                        if(timeToStop) {
-                            refresh();
-                            repaint();
-                            antAnimation.stop();
-                        }
+                        antAnimation.stop();
+                    }
 
                 }
         });
