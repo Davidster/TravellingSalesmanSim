@@ -191,7 +191,7 @@ public class GraphPanel extends JPanel implements MouseListener,MouseMotionListe
         g2.setColor(Color.BLACK);
 
         if(drawPoints.isEmpty()){
-            g2.drawString("Click display matrix to read from file: "+GraphFrame.currentFile,GRID_SIZE*boxHeight/2-100,GRID_SIZE*boxWidth/2);
+            g2.drawString("Click displayMode matrix to read from file: "+GraphFrame.currentFile,GRID_SIZE*boxHeight/2-100,GRID_SIZE*boxWidth/2);
             g2.drawString("(or simply add points by clicking inside this box)",GRID_SIZE*boxHeight/2-115,GRID_SIZE*boxWidth/2 + 20);
         }
 

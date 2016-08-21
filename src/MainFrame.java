@@ -4,37 +4,38 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class MainFrame extends JFrame implements ActionListener{
-    JButton open;
+    JButton openButton;
     JLabel label;
-    DisplayMode display;
+    DisplayMode displayMode;
+
     public MainFrame() {
         super();
+
         setVisible(true);
         setLayout(new GridLayout(2, 0));
+        displayMode = new DisplayMode(0, 0, 8, 75);
 
-        display = new DisplayMode(0, 0, 8, 75);
+        openButton = new JButton("Click To Open");
+        openButton.setActionCommand("AntOpener");
 
-        open = new JButton("Click To Open");
-        open.setActionCommand("AntOpener");
-
-        label = new JLabel("Travelling Salesman Problem Solver.");
+        label = new JLabel("Travelling Salesman Problem Solver");
         label.setHorizontalAlignment(JLabel.CENTER);
 
-        open.addActionListener(this);
+        openButton.addActionListener(this);
 
         add(label);
-        add(open);
+        add(openButton);
 
         setFocusable(true);
     }
 
-    
+
     public void actionPerformed(ActionEvent e){
         if(e.getActionCommand().equals("AntOpener")){
             dispose();
             GraphFrame frame = new GraphFrame();
 
-            frame.run(display);
+            frame.run(displayMode);
            // frame.pack();
         }
     }
