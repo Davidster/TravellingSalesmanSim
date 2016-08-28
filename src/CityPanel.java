@@ -326,7 +326,7 @@ public class CityPanel extends JPanel implements MouseListener,MouseMotionListen
     }
     @Override
     public void paintComponent(Graphics gr){
-        //intitialization
+        //initialization
         if(getWidth()+15 != getHeight()){
             int big = Math.min(getWidth(), getHeight());
             if(big < GRID_SIZE)
