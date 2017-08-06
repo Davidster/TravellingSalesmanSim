@@ -3,7 +3,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
-import com.google.common.collect.Collections2;
 
 
 public class RandomNess {

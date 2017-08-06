@@ -23,7 +23,7 @@ public class MainFrame extends JFrame implements ActionListener{
          */
         String greeting_text_html_formatted = "<html><body>Default<br>Greeting</body></html>";
         try {
-            BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir") + "/res/greeting_text.html"));
+            BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir") + "/../res/greeting_text.html"));
             String line = br.readLine();
             greeting_text_html_formatted = "";
             while (line != null) {
